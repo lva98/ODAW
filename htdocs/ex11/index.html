@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulário PHP</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> <a href="index.html">Cadastro Registro</a> </td>
+            <td> <a href="listar.php">Listar Banco</a> </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form action="validacao.php" method="post">
+        <table>
+            <tr>
+                <td colspan="4" style="text-align: center;"> Cadastro </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Nome
+                </td>
+                <td>
+                    <input type="text" name="nome" placeholder="Jeferson Souza" required><br>
+                </td>
+                <td>
+                    Telefone
+                </td>
+                <td>
+                    <input name="telefone" type="text" pattern="[0-9]{2} [0-9]{4,5}-[0-9]{4}" placeholder="99 12345-1234" required value = "9999">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Genero
+                </td>
+                <td>
+                    <input type="radio" name="genero" value="masculino" checked> Masculino 
+                    <input type="radio" name="genero" value="feminino"> Feminino 
+                    <input type="radio" name="genero" value="outro"> Outro
+                </td>
+                <td>
+                    Data Nasc.
+                </td>
+                <td>
+                    <input type="date" name="data" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Função
+                </td>
+                <td>
+                    <select name="funcao">
+                        <option value="pedreiro">Pedreiro</option>
+                        <option value="servente">Servente</option>
+                        <option value="engenheiro">Engenheiro(a)</option>
+                        <option value="secretária">Secretário(a)</option>
+                    </select>
+                </td>
+                <td>
+                    Salário
+                </td>
+                <td>
+                    <input type="number" placeholder=1000 required name="salario">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
